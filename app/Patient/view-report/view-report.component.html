@@ -1,0 +1,90 @@
+<!-- <div class="mb-5">
+        <div class="row">
+            <div class="col-6">
+    <div class="card-deck">
+          
+            <img class="card-img-top" src="https://image.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7781.jpg" alt="Card image cap">
+            <div class="card-body">
+                <div class="row">
+              <p class="card">Patients Pending</p>
+            </div>
+            <div class="row ml-auto">
+                    <button [routerLink]="['/patientacceptbydoctor']" type="button" class="btn btn-warning">
+                        <i class="material-icons other_icon"> notes </i> Patient List
+                    </button>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card-deck">
+                <img class="card-img-top" src="https://image.shutterstock.com/image-photo/focus-on-hand-patient-hospital-600w-589302497.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <div class="row">
+                  <p class="card-text">Report Genarate</p>
+                </div>
+                <div class="row ml-auto">
+                        <button [routerLink]="['/reportgenarate']" type="button" class="btn btn-warning">
+                            <i class="material-icons other_icon"> notes </i> Genarate Report
+                        </button>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+              </div>
+            
+        
+     -->
+     
+     <div class="row container-fluid">
+            <div class="col-xs-12 my-5 mx-auto">
+                <h1>View Reports</h1>
+                    <table class="table">
+                        <tr>
+                   
+                        <th class="ml-5">REPORT ID</th>
+                        <th class="ml-5">PATIENT ID</th>
+                        <th class="ml-5">DOCTOR ID</th>
+                        <th class="ml-5">MEDICAL ID</th>
+                        <th class="ml-5">DATE</th>
+                        <th class="ml-5">RESULT DATE</th>
+                        <th class="ml-5">D A 1</th>
+                        <th class="ml-5">N R 1</th>
+                        <th class="ml-5">D A 2</th>
+                        <th class="ml-5">N R 2</th>
+                        <th class="ml-5">D A 3</th>
+                        <th class="ml-5">N R 3</th>
+                        <th class="ml-5">D A 4</th>
+                        <th class="ml-5">N R 4</th>
+                        <th class="ml-5">COMMENTS</th>
+                        <th class="ml-5">INFO</th>
+                        <th class="ml-5">STATUS</th>
+                        
+                    </tr>
+                   
+                        <tr *ngFor="let reports of report">
+                            <td class="ml-5">{{reports.id}}</td>
+                            <td class="ml-5 blue">{{reports.cusid}}</td> 
+                            <td class="ml-5">{{reports.docid}}</td>
+                            <td class="ml-5 blue">{{reports.medid}}</td>
+                            <td class="ml-5">{{reports.servicedata}}</td>
+                            <td class="ml-5 blue">{{reports.testresultdate}}</td>
+                            <td class="ml-5">{{reports.actualvalue1}}</td>
+                            <td class="ml-5 blue">{{reports.normalrange1}}</td>
+                            <td class="ml-5">{{reports.actualvalue2}}</td>   
+                            <td class="ml-5 blue">{{reports.normalrange2}}</td> 
+                            <td class="ml-5">{{reports.actualvalue3}}</td> 
+                            <td class="ml-5 blue">{{reports.normalrange3}}</td> 
+                            <td class="ml-5 ">{{reports.actualvalue4}}</td>
+                            <td class="ml-5">{{reports.normalrange4}}</td>  
+                            <td class="ml-5 blue">{{reports.doctorcomments}}</td>
+                            <td class="ml-5">{{reports.otherinfo}}</td>  
+                            <td class="ml-5 blue">{{reports.status}}</td> 
+                           
+                        </tr>
+                      
+                    </table>
+            </div>
+        </div>
+    

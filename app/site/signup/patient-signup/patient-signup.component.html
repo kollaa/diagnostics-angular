@@ -1,0 +1,119 @@
+<div class="row search-bar">
+                <div class="col-xs-11 mt-5 ml-5 mr-5 mb-5 mx-auto">
+                    <div class="card mt-5 search-pat">
+                        <h1 class="mt-5 ml-5">Patient Signup</h1>
+                        <form [formGroup]="signUpForm" (submit)="this.basicServiceService.addPatient(signUpForm.value)">
+                            <div class="row mt-5 ml-5 mr-5">
+                      <div class="alert-danger col-12 px-auto" *ngIf="signUpForm.get('firstname').hasError('userNameTaken')">
+                        Username already exists
+                      </div>
+                      <div class="col-md-6 col-xs-12 mt-5">
+                            <label for="firstname">First Name</label> 
+                            <input type="text" class="form-control" placeholder="Enter First Name" formControlName="firstname" id="firstname">
+                            <div class="text-danger" *ngIf="firstname.invalid && firstname.errors.required && firstname.touched">First Name is required</div>
+                                      </div>
+                                <div class="col-md-6 col-xs-12 mt-5">
+                                        <label for="id"> id</label> 
+                                        <input type="text" class="form-control" placeholder="Enter PatientId" formControlName="id" id="id">
+                                        <div class="text-danger" *ngIf="id.invalid &&  id.errors.required &&  id.touched">PatientId is required</div>
+                                                  </div>
+                            
+                            </div>
+                            <div class="row ml-5 mr-5">
+                                    <div class="col-md-6 col-xs-12  mt-5">
+                                            <label for="lastname">Last Name</label> 
+                                            <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="lastname" id="lastname">
+                                            <div class="text-danger" *ngIf="lastname.invalid && lastname.errors.required && lastname.touched">Last Name is required</div>
+                                                      </div>
+                                <div class="col-md-6 col-xs-12  mt-5">
+                      <label for="age">Age</label> 
+                      <input type="text" class="form-control" placeholder="Enter age" formControlName="age" id="age">
+                      <div class="text-danger" *ngIf="age.invalid && age.errors.required && age.touched">Age is required</div>
+                      <div class="text-danger" *ngIf="age.hasError('pattern')">Age Should Be Number</div> 
+                    </div>
+                            </div>
+                            <div class="row ml-5 mr-5">
+                                <div class="col-md-6 col-xs-12 mt-5">
+                      <label for="password">Password</label> 
+                      <input type="password" class="form-control" placeholder="Enter Password" formControlName="password" id="password">
+                      <div class="text-danger" *ngIf="password.invalid && password.errors.required && password.touched">Password is required</div>
+                                </div>
+                                <div class="col-md-6 col-xs-12 mt-5">
+                                    <label for="gender">Gender</label> 
+                                    <select  class="form-control" placeholder="Enter Password" formControlName="gender" id="gender">
+                                    <option value="">choose your gender</option><option *ngFor="let g of Gender" [ngValue]="g">{{g}}</option></select>
+                                    <div class="text-danger" *ngIf="gender.errors?.required &&gender.touched">Gender is required</div>
+                                              </div>
+                            </div>
+            
+                            <div class="row ml-5 mr-5">
+                            <div class="col-md-6 col-xs-12 mt-5">
+                                    <label for="email">EmailId</label> 
+                                    <input type="text" class="form-control" placeholder="Enter EmailId" formControlName="email" id="email">
+                                    <div class="text-danger" *ngIf="email.invalid && email.errors.required && email.touched">EmailId is required</div>
+                            </div>
+                            <div class="col-md-6 col-xs-12 mt-5">
+                                    <label for="address1">Addressline1</label> 
+                                    <input type="text" class="form-control" placeholder="Enter Addressline1" formControlName="address1" id="address1">
+                                    <div class="text-danger" *ngIf="address1.invalid && address1.errors.required && address1.touched">Addressline1 is required</div>
+                            </div>
+                            </div>
+                            <div class="row ml-5 mr-5">
+                                <div class="col-md-6 col-xs-12 mt-5">
+                                        <label for="dob">DOB</label> 
+                                        <input type="date" class="form-control" placeholder="Enter dob" formControlName="dob" id="dob">
+                                        <div class="text-danger" *ngIf="dob.invalid && dob.errors.required && dob.touched">DOB is required</div>
+                                </div>
+                                
+                                <div class="col-md-6 col-xs-12 mt-5">
+                                        <label for="number">ContactNumber</label> 
+                                        <input type="text" class="form-control" placeholder="Enter ContactNumber" formControlName="number" id="number">
+                                        <div class="text-danger" *ngIf="number.invalid && number.errors.required && number.touched">ContactNumber is required</div>
+                                        <div class="text-danger" *ngIf="number.hasError('pattern')">Contact Should Be in Number</div>
+                                    </div>
+                            </div>
+                            <div class="row ml-5 mr-5">
+                                    <div class="col-md-6 col-xs-12 mt-5">
+                                            <label for="state">State</label> 
+                                            <input type="text" class="form-control" placeholder="Enter State" formControlName="state" id="state">
+                                            <div class="text-danger" *ngIf="state.invalid && state.errors.required && state.touched">State is required</div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 col-xs-12 mt-5">
+                                            <label for="city">City</label> 
+                                            <input type="text" class="form-control" placeholder="Enter city" formControlName="city" id="city">
+                                            <div class="text-danger" *ngIf="city.invalid && city.errors.required && city.touched">City is required</div>
+                                    </div>
+                                </div>
+            
+                                <div class="row ml-5 mr-5">
+                                        <div class="col-md-6 col-xs-12 mt-5">
+                                                <label for="code">ZipCode</label> 
+                                                <input type="text" class="form-control" placeholder="Enter ZipCode" formControlName="code" id="code">
+                                                <div class="text-danger" *ngIf="code.invalid && code.errors.required && code.touched">ZipCode is required</div>
+                                        </div>
+                                        <div class="col-md-6 col-xs-12 mt-5">
+                                                <label for="altnumber">altnumber</label> 
+                                                <input type="text" class="form-control" placeholder="Enter altnumber" formControlName="altnumber" id="altnumber">
+                                            <div class="text-danger" *ngIf="altnumber.invalid && altnumber.errors.required && altnumber.touched">altnumber is required</div>
+                                            <div class="text-danger" *ngIf="altnumber.hasError('pattern')">Contact Should Be in Number</div>    
+                                    </div>
+                                </div>
+                                <div class="row ml-5 mr-5">
+                                                <div class="col-md-6 col-xs-12 mt-5">
+                                                        <label for="address2">address2</label> 
+                                                        <input type="text" class="form-control" placeholder="Enter ZipCode" formControlName="address2" id="address2">
+                                                        <div class="text-danger" *ngIf="address2.invalid && address2.errors.required && address2.touched">address2 is required</div>
+                                                </div>
+                                        </div>
+                            
+                                <div class="row mt-5 ml-5 mr-5 mb-5">
+                                    <div class="col-12">
+                                        <button type="submit"  class="btn signup-btn col-ora" [disabled]="!signUpForm.valid">Signup</button>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            

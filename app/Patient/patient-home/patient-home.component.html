@@ -1,0 +1,64 @@
+<div class="search-bar">
+        <div class="row">
+            <div class="col-xl-11 mt-5 ml-5">
+                <h1 class="text-white">Find MedicalServices</h1>
+            </div>
+            <div class="col-xl-11 mt-5 ml-5">
+                <form>
+                    <div class="input-group md-form form-sm form-1 pl-0">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text purple lighten-3 mb-5" id="basic-text1"><i
+                                    class="material-icons">movie</i></span>
+                        </div>
+                        <input type="search" class="form-control mr-5 mb-5" name="search-bar" [(ngModel)]="searchKey"
+                            (input)="search()" placeholder="Search MedicalServices">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="card-deck my-5">
+            <div class="col-xl-3 col-md-6 mx-auto my-5" *ngFor="let doctor of filtereddoctorList">
+              
+                    <div class="card card-back-1 ">
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="card-title"><b>Doctor Name : </b>  {{doctor.firstname}}</h4>
+                                    </div>
+                                </div>
+                              
+                                  
+                                <div class="row">
+                                    <div class="col-6">
+                                        <i class="material-icons other_icon">access_time</i> <b>Working Hours</b> 
+                                        <div>{{doctor.workhours}}</div>
+                                    </div>
+
+                                    <div class="col-6">
+                                            <b>Medical Service</b>
+                                            <div>{{doctor.medicareService.medicareservice}}</div>
+                                        </div>
+                                    </div>
+                                <div class ="row"> 
+                                        <div class="col-6">
+                                    <div class="mr-auto">Gender:{{doctor.gender}}</div>
+                            </div>
+                            </div> 
+                            <div class="row">
+                                     <div class="col-1">
+                                        <button [routerLink]="['/booking',doctor.id]" type="button"  class="btn btn-size btn-dark btn-sm">
+                                            ** BOOK ME **
+                                        </button>
+                                    </div> 
+                                </div>
+                            </div>
+
+
+            </div>
+          </div>
+          </div>

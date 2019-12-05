@@ -1,0 +1,14 @@
+.back-image-1 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAcNw04Qg8ACNC7-2Kpv90KVzA8hNMCTuVwPRqk50samXf9NGd");
+    height: 700px;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.card-back{
+    background-color:lightblue !important;
+}

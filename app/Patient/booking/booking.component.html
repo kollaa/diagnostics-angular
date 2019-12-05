@@ -1,0 +1,147 @@
+<div class="card image">
+    <div class="card  col-sm-4 mt-5 ml-5 mr-5 mb-5 mx-auto content">
+    <div class="card-body card-back">
+        <div class="row ">
+            <div class="col-12">
+                <h4 class="card-title text-center">Booking Details</h4>
+            </div>
+        </div><br>
+
+        <div class="row ">
+            <div class="col-12">
+                <h5><b>Doctor Name : </b> {{doctor.firstname}}</h5>
+            </div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-12">
+                <i class="material-icons other_icon">access_time</i> <b>Working Hours</b>
+                {{doctor.workhours}}
+            </div>
+        </div><br>
+
+         <!-- <div class="row">
+            <div class="col-12">
+                <div class="mr-auto">
+                    <b>Specialized At :</b>
+                    {{doctor.specality}}
+                </div>
+
+            </div>
+        </div><br>  -->
+
+
+        <div class="row">
+            <div class="col-12">
+                <div> <b>Medical Service</b>
+                    {{doctor.medicareService.amount}}</div>
+            </div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-12">
+                <div><b>Medical Service Discription</b>
+                    {{doctor.medicareService.servicedesc}}</div>
+            </div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="mr-auto"><b>Amount </b>{{doctor.medicareService.amount}}</div>
+            </div>
+        </div>
+
+<br>
+       <div class="row">
+                                     <div class="col-1">
+                                        <button (click)="Booking(doctor.firstname)" type="button"  class="btn btn-dark btn-sm">
+                                            <i class="material-icons other_icon"> calender-today </i> Confirm
+                                        </button>
+                                    </div> 
+                                </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<!-- <div class="card ">
+    
+         <div class="row">
+              <div class="col-12">
+                  <h4 class="card-title">Booking Details</h4>
+               </div>
+         </div>
+
+
+             <div class="row">
+                <div class="col-12">
+                    <h5><b>Doctor Name : </b>  {{doctor.firstname}}</h5>
+                </div>
+             </div>
+                              
+                                  
+             <div class="row">
+                <div class="col-12">
+                    <i class="material-icons other_icon">access_time</i> <b>Working Hours</b> 
+                        {{doctor.workhours}}
+                 </div>
+             </div>
+                                 
+
+             <div class ="row"> 
+                    <div class="col-12">
+                           <div class="mr-auto">
+                                        <b>Specialized At :</b>
+                                        {{doctor.specality}}
+                            </div>
+                                   
+                     </div>
+             </div> 
+
+ 
+                             
+                        
+
+
+                                <div class="row">
+                                    <div class="col-12">
+                                            <div> <b>Medical Service</b>
+                                            {{doctor.medicareService.amount}}</div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row">
+                                            <div class="col-12">
+                                                    <div><b>Medical Service Discription</b>
+                                                    {{doctor.medicareService.servicedesc}}</div>
+                                                </div>
+                                            </div>
+
+
+
+                                    <div class ="row"> 
+                                            <div class="col-12">
+                                        <div class="mr-auto"><b>Amount  </b>{{doctor.medicareService.amount}}</div>
+                                </div>
+                                </div> 
+
+                                
+
+                          
+                            <div class="row">
+                                     <div class="col-1">
+                                        <button (click)="Booking(doctor.firstname)" type="button"  class="btn btn-dark btn-sm">
+                                            <i class="material-icons other_icon"> calender-today </i> Confirm
+                                        </button>
+                                    </div> 
+                                </div>
+                            
+
+
+            </div>  -->

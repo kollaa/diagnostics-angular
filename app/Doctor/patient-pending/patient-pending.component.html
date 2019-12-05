@@ -1,0 +1,30 @@
+<div class="row container-fluid">
+    <div class="col-xs-12 my-5 mx-auto">
+        <h1>Patient To Accept</h1>
+        <div *ngIf="this.size == 0" class="alert alert-danger mt-5">
+                No Doctor Request Pending.Click Back to go to Previous Page
+                    <a routerLink="/admin">Back.</a>
+        </div>
+        <div class="card mt-5">
+            <table class="table">
+                <tr *ngFor="let pendingPatient of booking.listone">
+                    <td class="ml-5">{{pendingPatient.firstname}}</td>
+                    <td>
+                        <div class="row">
+                            <div class="ml-auto">
+                                    <a class="nav-link delete-icon" (click)="onApprove(pendingPatient)">
+                                            <i class="material-icons">check</i>
+                                        </a>
+
+                                <a class="nav-link delete-icon" (click)="onReject(pendingPatient.id)">
+                                    <i class="material-icons">close</i>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+              
+            </table>
+        </div>
+    </div>
+</div>

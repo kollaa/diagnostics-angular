@@ -1,0 +1,139 @@
+<div class="container mb-4 pb-4">
+        <h2>Test Report</h2>
+    
+        <form class="needs-validation" [formGroup]="editForm" (submit)="this.basicServiceService.onSubmitReportForm(editForm.value)">
+            <div class="form-row">
+                <div class="form-group col-md-12 mb-3">
+                    <label for="id">Id</label>
+                    <input type="text" class="form-control " id="id" formControlName="id" disabled>
+    
+                </div>
+                
+                <div class="form-group col-md-12 mb-3">
+                    <label for="medid">medicarserviceid</label>
+                    <input type="text" class="form-control" id="medid" formControlName="medid" disabled>
+    
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3 mb-3">
+                    <label for="cusid">customerid</label>
+                    <input type="text" class="form-control" id="cusid" formControlName="cusid" disabled>
+                </div>
+    
+                <div class="form-group col-md-3 mb-3">
+                    <label for="docid">Doctorid</label>
+                    <input type="text" class="form-control" id="docid" formControlName="docid"
+                        placeholder="Doctorid" disabled>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3 mb-3">
+                    <label for="servicedata">service date</label>
+                    <input type="date" class="form-control" id="servicedata" formControlName="servicedata"
+                        placeholder="dd/mm/yyyy" >
+                </div>
+    
+                <div class="form-group col-md-3 mb-3">
+                    <label for="testresultdate">testresultdate</label>
+                    <input type="date" class="form-control" id="testresultdate" formControlName="testresultdate"
+                        placeholder="dd/mm/yyyy">
+                        <div class="text-danger" *ngIf="testresultdate.invalid && testresultdate.errors.required && testresultdate.touched">testresultdate is required</div>
+                    </div>
+                </div>
+            
+            
+    
+            <div class="form-row">
+                <div class="form-group col-md-3 mb-3">
+                    <label for="actualvalue1">Actual Value1</label>
+                    <input type="text" class="form-control" id="price" formControlName="actualvalue1" placeholder="actualvalue1">
+                    <div class="text-danger" *ngIf="actualvalue1.invalid && actualvalue1.errors.required && actualvalue1.touched">actual value 1 is required</div>
+                                                  </div>
+        
+    
+                <div class="form-group col-md-3 mb-3">
+                        <label for="normalrange1">normalrange1</label>
+                        <input type="text" class="form-control" id="price" formControlName="normalrange1" placeholder="normalrange1">
+                        <div class="text-danger" *ngIf="normalrange1.invalid && normalrange1.errors.required &&  normalrange1.touched">normal range 1 is required</div>
+                                                  </div>
+            
+                  
+                </div>  
+            
+            <div class="form-row">
+                    <div class="form-group col-md-3 mb-3">
+                        <label for="actualvalue2">Actual Value2</label>
+                        <input type="text" class="form-control" id="price" formControlName="actualvalue2" placeholder="actualvalue2">
+            
+                    </div>
+        
+                    <div class="form-group col-md-3 mb-3">
+                            <label for="normalrange2">normalrange2</label>
+                            <input type="text" class="form-control" id="price" formControlName="normalrange2" placeholder="normalrange2">
+                
+                        </div>
+                </div>
+                <div class="form-row">
+                        <div class="form-group col-md-3 mb-3">
+                            <label for="actualvalue3">Actual Value3</label>
+                            <input type="text" class="form-control" id="price" formControlName="actualvalue3" placeholder="actualvalue3">
+                
+                        </div>
+            
+                        <div class="form-group col-md-3 mb-3">
+                                <label for="normalrenge3">normalrange3</label>
+                                <input type="text" class="form-control" id="price" formControlName="normalrenge3" placeholder="normalrenge3">
+                    
+                            </div>
+                    </div>
+                    <div class="form-row">
+                            <div class="form-group col-md-3 mb-3">
+                                <label for="Actual Value4">Actual Value4</label>
+                                <input type="text" class="form-control" id="price" formControlName="actualvalue4" placeholder="actualvalue4">
+                    
+                            </div>
+                
+                            <div class="form-group col-md-3 mb-3">
+                                    <label for="normalrenge4">normalrenge4</label>
+                                    <input type="text" class="form-control" id="price" formControlName="normalrenge4" placeholder="normalrenge4">
+                        
+                                </div>
+                        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-3 mb-3">
+                                <label for="ActualValue4">Actual Value5</label>
+                                <input type="text" class="form-control" id="actualvalue5" formControlName="actualvalue5" placeholder="actualvalue5">
+                    
+                            </div>
+                        </div>
+    
+            <div class="form-row">
+                <div class="form-group  col-md-12 mb-3">
+                    <label for="doctorcomments">Doctor Comments</label>
+                    <input type="text" class="form-control" id="doctorcomments" formControlName="doctorcomments">
+    
+                </div>
+            </div>
+
+            <div class="form-row">
+                    <div class="form-group  col-md-12 mb-3">
+                        <label for="otherinfo">otherinfo</label>
+                        <input type="text" class="form-control" id="otherinfo" formControlName="doctorcomments">
+        
+                    </div>
+                </div>
+
+    
+            <!-- <input type="submit" class="btn button link text-light mt-5" value="Save"> -->
+    
+            <div class="row mt-5 ml-5 mr-5 mb-5">
+                <div class="col-12">
+                    <button type="submit" class="btn signup-btn col-ora"  >Submit</button>
+                </div>
+            </div>
+    
+        </form>
+    </div>
+    
+    

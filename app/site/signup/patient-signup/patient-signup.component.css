@@ -1,0 +1,14 @@
+.back-image-3 {
+    background-image: url("https://image.freepik.com/free-photo/blur-hospital_1203-7972.jpg");
+    height: 1200px;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.card-back{
+    background-color:lightblue !important;
+}
